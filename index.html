@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>股票殖利率計算機</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>股票殖利率計算機</h1>
+    <label>當前股價（元）
+      <input type="number" id="price" step="0.01">
+    </label>
+    <label>現金股利（元）
+      <input type="number" id="cashDividend" step="0.01">
+    </label>
+    <label>股票股利（股）
+      <input type="number" id="stockDividend" step="0.01">
+    </label>
+    <button onclick="calculate()">計算</button>
+
+    <div id="result">
+      <p>📈 現金殖利率：<span id="cashYield">--</span>%</p>
+      <p>📉 除權息後股價：<span id="exDividendPrice">--</span> 元</p>
+      <p>📊 還原殖利率：<span id="yieldRate">--</span>%</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
